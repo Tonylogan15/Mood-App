@@ -1,0 +1,57 @@
+MoodMatchMovieApp/
+│
+├── README.md                       # Overview of the project, setup instructions
+├── .gitignore                      # Ignore build files, IDE configs, etc.
+├── build.gradle                    # Top-level Gradle build file
+├── settings.gradle                 # Gradle settings
+│
+├── app/                            # Main application module
+│   ├── build.gradle                # App-level Gradle config
+│   ├── proguard-rules.pro          # ProGuard rules for release build
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── AndroidManifest.xml # App manifest
+│   │   │   ├── java/com/example/moodmatchmovieapp/
+│   │   │   │   ├── MainActivity.kt                # Launch activity
+│   │   │   │   ├── MoodSelectionActivity.kt       # Screen for mood input
+│   │   │   │   ├── RecommendationActivity.kt      # Displays recommended movies/shows
+│   │   │   │   ├── adapters/
+│   │   │   │   │   ├── MovieAdapter.kt            # RecyclerView adapter for results
+│   │   │   │   ├── data/
+│   │   │   │   │   ├── Movie.kt                   # Data model for movie/show
+│   │   │   │   │   ├── Mood.kt                    # Enum or class for moods
+│   │   │   │   │   ├── MovieRepository.kt         # Data source logic (temporary dummy data)
+│   │   │   │   ├── network/
+│   │   │   │   │   ├── ApiClient.kt               # For connecting to API (future feature)
+│   │   │   │   │   ├── ApiService.kt              # Defines endpoints for movie data
+│   │   │   │   ├── utils/
+│   │   │   │   │   ├── MoodUtils.kt               # Helper functions for mapping moods to genres
+│   │   │   │   ├── viewmodel/
+│   │   │   │   │   ├── MoodViewModel.kt           # Handles UI data and mood recommendations
+│   │   │   ├── res/
+│   │   │   │   ├── layout/
+│   │   │   │   │   ├── activity_main.xml          # Landing screen layout
+│   │   │   │   │   ├── activity_mood_selection.xml # Mood selection layout
+│   │   │   │   │   ├── activity_recommendation.xml # Movie recommendation layout
+│   │   │   │   │   ├── item_movie.xml             # Layout for RecyclerView item
+│   │   │   │   ├── values/
+│   │   │   │   │   ├── colors.xml
+│   │   │   │   │   ├── strings.xml
+│   │   │   │   │   ├── themes.xml
+│   │   │   │   ├── drawable/
+│   │   │   │   │   ├── ic_launcher_foreground.xml
+│   │   │   │   │   ├── ic_launcher_background.xml
+│   │   │   │   │   ├── mood_icons/                # Folder for mood icons (happy, sad, etc.)
+│   │   │   │   ├── raw/
+│   │   │   │   │   ├── sample_movies.json         # Placeholder movie dataset for testing
+│   │   │   ├── assets/
+│   │   │   │   ├── dummy_data/                    # Optional: extra sample data or images
+│   │   ├── test/java/com/example/moodmatchmovieapp/
+│   │   │   ├── ExampleUnitTest.kt
+│   │   ├── androidTest/java/com/example/moodmatchmovieapp/
+│   │   │   ├── ExampleInstrumentedTest.kt
+│
+└── gradle/                          # Gradle wrapper files
+    ├── wrapper/
+    │   ├── gradle-wrapper.jar
+    │   ├── gradle-wrapper.properties
