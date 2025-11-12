@@ -1,5 +1,5 @@
 ---
-title: Brainstorming
+Title: Brainstorming
 
 
 
@@ -33,30 +33,26 @@ After reviewing all nine ideas, the group voted and selected these top three app
 
 Using the required criteria: Mobile, Story, Market, Habit, Scope
 
- 1. MovieMood – Mood-Based Movie Recommendations
+ 1. MovieMood – Mood-Based Movie Recommendations  
+-**Mobile:**	Strong mobile experience with interactive UI, scrolling, posters, and mood buttons.  
+-**Story:**	Very relatable — solves the “What should I watch?” problem.  
+-**Market:**	Large audience: college students, movie lovers, anyone with streaming apps.  
+-**Habit:**	Medium–high. Users may check it often to find something to watch.  
+-**Scope:**	Clear MVP: choose a mood → display recommended movie list using an API. Very achievable.  
 
-**Criteria	Evaluation**
-**Mobile:**	Strong mobile experience with interactive UI, scrolling, posters, and mood buttons.
-**Story:**	Very relatable — solves the “What should I watch?” problem.
-**Market:**	Large audience: college students, movie lovers, anyone with streaming apps.
-**Habit:**	Medium–high. Users may check it often to find something to watch.
-**Scope:**	Clear MVP: choose a mood → display recommended movie list using an API. Very achievable.
+ 2. HydrateMe – Water Reminder App  
+-**Mobile:**	Great mobile use case with notifications and daily tracking.  
+-**Story:**	Easy to explain: stay hydrated and build healthy habits.  
+-**Market:**	Appeals to students, athletes, and health beginners.   
+-**Habit:**	High — users log water multiple times per day.  
+-**Scope:**	Simple MVP: log cups, set daily goal, see progress. Manageable.  
 
- 2. HydrateMe – Water Reminder App
-
-**Mobile:**	Great mobile use case with notifications and daily tracking.
-**Story:**	Easy to explain: stay hydrated and build healthy habits.
-**Market:**	Appeals to students, athletes, and health beginners.
-**Habit:**	High — users log water multiple times per day.
-**Scope:**	Simple MVP: log cups, set daily goal, see progress. Manageable.
-
- 3. PetMatch – Adoptable Pet Finder
-
-**Mobile:**	Mobile-friendly card layout with photos and filters.
-**Story:**	Helps people find pets and supports shelters — strong emotional appeal.
-**Market:**	Pet lovers, families, students wanting companionship.
-**Habit:**	Medium — users browse often but not necessarily every day.
-**Scope:**	MVP is doable: show list of pets from API + detail screen. Slightly more API setup but still manageable.
+ 3. PetMatch – Adoptable Pet Finder  
+-**Mobile:**	Mobile-friendly card layout with photos and filters.  
+-**Story:**	Helps people find pets and supports shelters — strong emotional appeal.  
+-**Market:**	Pet lovers, families, students wanting companionship.  
+-**Habit:**	Medium — users browse often but not necessarily every day.  
+-**Scope:**	MVP is doable: show list of pets from API + detail screen. Slightly more API setup but still manageable.  
 
 **Step 2c:** Final App Decision
 
