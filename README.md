@@ -1,4 +1,4 @@
-# AND101 Milestone 1 - **Mood App**
+# AND101 Milestone 1 - **MoodMatch Movie App**
 
 Submitted by:
 - **Antonio Logan**
