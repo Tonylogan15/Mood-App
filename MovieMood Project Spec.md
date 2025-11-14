@@ -1,7 +1,3 @@
----
-title: MovieMood Project Spec
-
----
 
 # **MovieMood**
 
