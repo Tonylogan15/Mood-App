@@ -84,10 +84,6 @@ Optional Feature
 <img src="./MoodApp Wireframe/recommendations.svg" width=600>
 <img src="./MoodApp Wireframe/settings.svg" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 ## Build Notes
 
 - Use Android Studio + Kotlin (or Swift if iOS group) to build UI and API integration.
