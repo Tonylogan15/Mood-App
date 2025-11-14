@@ -1,0 +1,12 @@
+<svg width="400" height="800" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="800" fill="white" stroke="black"/>
+<text x="80" y="80" font-size="28" font-family="Arial">Select Your Mood</text>
+<rect x="60" y="150" width="120" height="120" fill="none" stroke="black" rx="15"/>
+<text x="100" y="220" font-size="40" font-family="Arial">:)</text>
+<rect x="220" y="150" width="120" height="120" fill="none" stroke="black" rx="15"/>
+<text x="260" y="220" font-size="40" font-family="Arial">:/</text>
+<rect x="60" y="320" width="120" height="120" fill="none" stroke="black" rx="15"/>
+<text x="100" y="390" font-size="40" font-family="Arial">:(</text>
+<rect x="220" y="320" width="120" height="120" fill="none" stroke="black" rx="15"/>
+<text x="260" y="390" font-size="40" font-family="Arial">:D</text>
+</svg>

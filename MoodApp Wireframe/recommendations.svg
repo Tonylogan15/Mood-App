@@ -1,0 +1,18 @@
+<svg width="400" height="800" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="800" fill="white" stroke="black"/>
+<text x="80" y="80" font-size="28" font-family="Arial">Recommendations</text>
+<rect x="40" y="140" width="80" height="120" fill="none" stroke="black"/>
+<text x="140" y="180" font-size="20" font-family="Arial">Movie Title</text>
+<rect x="140" y="200" width="120" height="30" fill="none" stroke="black" rx="10"/>
+<text x="150" y="222" font-size="14" font-family="Arial">Platform</text>
+
+<rect x="40" y="290" width="80" height="120" fill="none" stroke="black"/>
+<text x="140" y="330" font-size="20" font-family="Arial">Movie Title</text>
+<rect x="140" y="350" width="120" height="30" fill="none" stroke="black" rx="10"/>
+<text x="150" y="372" font-size="14" font-family="Arial">Platform</text>
+
+<rect x="40" y="440" width="80" height="120" fill="none" stroke="black"/>
+<text x="140" y="480" font-size="20" font-family="Arial">Movie Title</text>
+<rect x="140" y="500" width="120" height="30" fill="none" stroke="black" rx="10"/>
+<text x="150" y="522" font-size="14" font-family="Arial">Platform</text>
+</svg>

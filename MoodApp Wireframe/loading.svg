@@ -1,0 +1,5 @@
+<svg width="400" height="800" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="800" fill="white" stroke="black"/>
+<text x="120" y="350" font-size="30" font-family="Arial">Loading...</text>
+<circle cx="200" cy="430" r="40" fill="none" stroke="black" stroke-width="3"/>
+</svg>

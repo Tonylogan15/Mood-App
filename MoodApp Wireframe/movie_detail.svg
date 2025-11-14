@@ -1,0 +1,8 @@
+<svg width="400" height="800" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="800" fill="white" stroke="black"/>
+<rect x="100" y="80" width="200" height="300" fill="none" stroke="black"/>
+<text x="80" y="420" font-size="28" font-family="Arial">Movie Title</text>
+<text x="80" y="460" font-size="18" font-family="Arial">Platform: Netflix</text>
+<rect x="80" y="500" width="240" height="60" fill="none" stroke="black" rx="10"/>
+<text x="140" y="537" font-size="22" font-family="Arial">Watch Now</text>
+</svg>
