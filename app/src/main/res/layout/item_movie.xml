@@ -1,24 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:padding="12dp"
-    android:layout_width="match_parent" android:layout_height="wrap_content">
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <ImageView android:id="@+id/imagePoster"
-        android:layout_width="80dp" android:layout_height="120dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
-    <LinearLayout android:orientation="vertical"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:paddingStart="12dp">
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Movie title" />
 
-        <TextView android:id="@+id/textTitle"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Title"/>
-
-        <TextView android:id="@+id/textDescription"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Description"/>
-
-        <RatingBar android:id="@+id/ratingBar"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:numStars="5"/>
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:text="Overview…" />
     </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5" />
 </LinearLayout>

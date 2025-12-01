@@ -1,12 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.moodmatch">
-    <application android:label="MoodMatch">
-        <activity android:name=".MovieDetailActivity"/>
-        <activity android:name=".MovieListActivity">
+
+    <!-- MUST be outside <application> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- optional but fine to keep -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="MoodMatch"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MoodTemplate">
+
+        <!-- Launcher: Compose home screen -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- List of movies after picking a mood -->
+        <activity
+            android:name=".MovieListActivity"
+            android:exported="false" />
+
+        <!-- (Optional) detail screen – can leave for later -->
+        <activity
+            android:name=".MovieDetailActivity"
+            android:exported="false" />
+
     </application>
+
 </manifest>
