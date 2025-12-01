@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.moodmatchmovieapp-mergeDebugResources-34:/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+            "outputFile": "com.example.moodmatch.app-mergeDebugResources-48:/values-h480dp-land-v13/values-h480dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\devos\\.gradle\\caches\\8.13\\transforms\\5ab85ada5d856ddd856b07fc96c101c0\\transformed\\material-1.13.0\\res\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
+                    "source": "/Users/drea/.gradle/caches/8.13/transforms/1fd9ec592817a12c3d353f38f540ae1b/transformed/material-1.12.0/res/values-h480dp-land-v13/values-h480dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
