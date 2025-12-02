@@ -1,4 +1,4 @@
-# AND101 Milestone 2 - **Team/App Name**
+# AND101 Milestone 2 - **MovieMood**
 
 Submitted by: - 
 -  **Antonio Logan**
