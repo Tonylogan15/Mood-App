@@ -1,6 +1,6 @@
 # AND101 Milestone 2 - **MovieMood**
 
-Submitted by: - 
+Submitted by: 
 -  **Antonio Logan**
 -  **Danielle Devose**
 -  **Ondrea Wagner**
