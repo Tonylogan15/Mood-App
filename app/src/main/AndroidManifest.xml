@@ -26,7 +26,7 @@
         <!-- List of movies after picking a mood -->
         <activity
             android:name=".MovieListActivity"
-            android:exported="false" />
+            android:exported="true" />
 
         <!-- (Optional) detail screen – can leave for later -->
         <activity

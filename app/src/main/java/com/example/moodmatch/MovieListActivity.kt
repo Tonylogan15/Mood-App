@@ -1,8 +1,8 @@
 package com.example.moodmatch
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.ProgressBar
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.lifecycle.lifecycleScope
@@ -14,51 +14,45 @@ import kotlinx.coroutines.launch
 
 class MovieListActivity : ComponentActivity() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var progressBar: ProgressBar
+    companion object {
+        const val EXTRA_MOOD = "EXTRA_MOOD"
+        private const val TAG = "MovieListActivity"
+    }
 
-    private val repository = MovieRepository()
-    private lateinit var adapter: MovieAdapter
+    private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_list)
 
-        recyclerView = findViewById(R.id.recyclerViewMovies)
-        progressBar = findViewById(R.id.progressBar)
-
+        recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        adapter = MovieAdapter(emptyList()) { movie ->
-            // For now just show a toast when you tap a movie
-            Toast.makeText(this, movie.title, Toast.LENGTH_SHORT).show()
-            // later: startActivity to MovieDetailActivity with movie info
-        }
-        recyclerView.adapter = adapter
+        val mood = intent.getStringExtra(EXTRA_MOOD) ?: ""
+        Log.d(TAG, "Mood from intent: '$mood'")
 
-        val mood = intent.getStringExtra("MOOD") ?: "happy"
-        loadMovies(mood)
+        loadMoviesForMood(mood)
     }
 
-    private fun loadMovies(mood: String) {
-        progressBar.visibility = View.VISIBLE
-        recyclerView.visibility = View.GONE
-
+    private fun loadMoviesForMood(mood: String) {
         lifecycleScope.launch {
-            try {
-                val movies: List<Movie> = repository.getMoviesForMood(mood)
-                adapter.updateMovies(movies)
-                recyclerView.visibility = View.VISIBLE
-            } catch (e: Exception) {
-                e.printStackTrace()
+            val movies: List<Movie> = MovieRepository.getMoviesForMood(mood)
+
+            if (movies.isEmpty()) {
                 Toast.makeText(
                     this@MovieListActivity,
-                    "Failed to load movies: ${e.message}",
-                    Toast.LENGTH_LONG
+                    "No movies found for $mood",
+                    Toast.LENGTH_SHORT
                 ).show()
-            } finally {
-                progressBar.visibility = View.GONE
             }
+
+            val adapter = MovieAdapter(movies.toMutableList()) { movie ->
+                val detailIntent = Intent(this@MovieListActivity, MovieDetailActivity::class.java)
+                detailIntent.putExtra(MovieDetailActivity.EXTRA_MOVIE, movie)
+                startActivity(detailIntent)
+            }
+
+            recyclerView.adapter = adapter
         }
     }
 }

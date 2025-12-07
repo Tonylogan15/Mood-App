@@ -3,35 +3,45 @@ package com.example.moodmatch
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.moodmatch.data.Movie
 
 class MovieAdapter(
-    private var movies: List<Movie>,
-    private val onClick: (Movie) -> Unit
+    private val movies: List<Movie>,
+    private val onItemClick: (Movie) -> Unit
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
-    fun updateMovies(newMovies: List<Movie>) {
-        movies = newMovies
-        notifyDataSetChanged()
+    companion object {
+        private const val TMDB_POSTER_BASE_URL = "https://image.tmdb.org/t/p/w342"
     }
 
     inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val titleView: TextView = itemView.findViewById(R.id.textTitle)
-        private val overviewView: TextView = itemView.findViewById(R.id.textDescription)
+        private val posterImage: ImageView = itemView.findViewById(R.id.imagePoster)
+        private val titleText: TextView = itemView.findViewById(R.id.textTitle)
+        private val descriptionText: TextView = itemView.findViewById(R.id.textDescription)
         private val ratingBar: RatingBar = itemView.findViewById(R.id.ratingBar)
 
         fun bind(movie: Movie) {
-            titleView.text = movie.title
-            overviewView.text = movie.overview
-            ratingBar.rating = movie.rating / 2f  // TMDB is /10, RatingBar is /5
+            titleText.text = movie.title
+            descriptionText.text = movie.overview
+
+            // TMDB 0–10 → RatingBar 0–5
+            ratingBar.rating = (movie.rating / 2.0).toFloat()
+
+            val url = movie.posterPath?.let { TMDB_POSTER_BASE_URL + it }
+            Glide.with(itemView)
+                .load(url)
+                .into(posterImage)
 
             itemView.setOnClickListener {
-                onClick(movie)
+                onItemClick(movie)
             }
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {

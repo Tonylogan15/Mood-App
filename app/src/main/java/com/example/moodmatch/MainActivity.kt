@@ -58,38 +58,38 @@ fun MoodHomeScreen(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.bodyMedium
         )
 
-        // Simple mood buttons – you can style or add emojis later
+        // Mood buttons now correctly pass EXTRA_MOOD
         Button(onClick = {
-            val i = Intent(context, MovieListActivity::class.java)
-            i.putExtra("MOOD", "happy")
-            context.startActivity(i)
-        }) {
-            Text("😊 Happy")
-        }
+            context.startActivity(
+                Intent(context, MovieListActivity::class.java).apply {
+                    putExtra(MovieListActivity.EXTRA_MOOD, "happy")
+                }
+            )
+        }) { Text("😊 Happy") }
 
         Button(onClick = {
-            val i = Intent(context, MovieListActivity::class.java)
-            i.putExtra("MOOD", "chill")
-            context.startActivity(i)
-        }) {
-            Text("😌 Chill")
-        }
+            context.startActivity(
+                Intent(context, MovieListActivity::class.java).apply {
+                    putExtra(MovieListActivity.EXTRA_MOOD, "chill")
+                }
+            )
+        }) { Text("😌 Chill") }
 
         Button(onClick = {
-            val i = Intent(context, MovieListActivity::class.java)
-            i.putExtra("MOOD", "sad")
-            context.startActivity(i)
-        }) {
-            Text("😢 Sad")
-        }
+            context.startActivity(
+                Intent(context, MovieListActivity::class.java).apply {
+                    putExtra(MovieListActivity.EXTRA_MOOD, "sad")
+                }
+            )
+        }) { Text("😢 Sad") }
 
         Button(onClick = {
-            val i = Intent(context, MovieListActivity::class.java)
-            i.putExtra("MOOD", "excited")
-            context.startActivity(i)
-        }) {
-            Text("🤩 Excited")
-        }
+            context.startActivity(
+                Intent(context, MovieListActivity::class.java).apply {
+                    putExtra(MovieListActivity.EXTRA_MOOD, "excited")
+                }
+            )
+        }) { Text("🤩 Excited") }
     }
 }
 

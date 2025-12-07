@@ -1,73 +1,42 @@
 package com.example.moodmatch.data
 
+import android.util.Log
+import com.example.moodmatch.network.TmdbApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import org.json.JSONObject
-import java.io.IOException
 
-class MovieRepository {
+object MovieRepository {
 
-    private val client = OkHttpClient()
+    private const val TAG = "MovieRepository"
 
+    // Map mood -> TMDB genre as STRING
+    private fun genreForMood(rawMood: String): String {
+        val mood = rawMood.lowercase().trim()
 
-    private val apiKey = "36989a0eb8ed3f5408c93434403eb31f"
-
-    private fun genreForMood(mood: String): Int {
-        // super simple mapping; tweak if you want
-        return when (mood.lowercase()) {
-            "happy" -> 35   // Comedy
-            "chill" -> 18   // Drama
-            "sad" -> 10749  // Romance
-            "excited" -> 28 // Action
-            else -> 35
+        return when {
+            "happy" in mood   -> "35"    // Comedy
+            "chill" in mood   -> "18"    // Drama
+            "sad" in mood     -> "10749" // Romance
+            "excited" in mood -> "28"    // Action
+            else              -> "35"    // default: Comedy
         }
     }
 
+    // Called from MovieListActivity inside lifecycleScope.launch
     suspend fun getMoviesForMood(mood: String): List<Movie> = withContext(Dispatchers.IO) {
         val genreId = genreForMood(mood)
+        Log.d(TAG, "Requesting movies for mood='$mood', mappedGenreId=$genreId")
 
-        val url =
-            "https://api.themoviedb.org/3/discover/movie" +
-                    "?with_genres=$genreId" +
-                    "&sort_by=popularity.desc" +
-                    "&language=en-US" +
-                    "&page=1" +
-                    "&api_key=$apiKey"
+        return@withContext try {
+            // 🔹 uses YOUR TmdbApiService from TmdbApiService.kt
+            val response = TmdbApi.retrofitService.getMoviesByGenre(genreId)
+            val movies = response.results
 
-        val request = Request.Builder()
-            .url(url)
-            .build()
-
-        val response = client.newCall(request).execute()
-
-        if (!response.isSuccessful) {
-            throw IOException("Unexpected code $response")
+            Log.d(TAG, "TMDB returned ${movies.size} movies for genreId=$genreId")
+            movies
+        } catch (e: Exception) {
+            Log.e(TAG, "Error loading movies for mood='$mood'", e)
+            emptyList()
         }
-
-        val bodyString = response.body?.string() ?: throw IOException("Empty response body")
-
-        val json = JSONObject(bodyString)
-        val results = json.getJSONArray("results")
-
-        val movies = mutableListOf<Movie>()
-
-        for (i in 0 until results.length()) {
-            val obj = results.getJSONObject(i)
-            val title = obj.optString("title", "Unknown title")
-            val overview = obj.optString("overview", "No overview available.")
-            val rating = obj.optDouble("vote_average", 0.0).toFloat()
-
-            movies.add(
-                Movie(
-                    title = title,
-                    overview = overview,
-                    rating = rating
-                )
-            )
-        }
-
-        movies
     }
 }
