@@ -35,7 +35,7 @@ The following REQUIRED files are included:
 
 Here's a video that demos all of the app's implemented features:
 
-<img src='Milestone2-DemoVideo.gif' title='Video Demo' width='' alt='Video Demo' />
+<img src='DemoVid2.gif' title='Video Demo' width='' alt='Video Demo' />
 
 VIDEO created with **Kap**
 
