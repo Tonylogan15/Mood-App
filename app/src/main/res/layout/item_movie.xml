@@ -5,29 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <!-- Movie poster -->
     <ImageView
         android:id="@+id/imagePoster"
         android:layout_width="90dp"
-        android:layout_height="120dp"
-        android:scaleType="centerCrop"
+        android:layout_height="130dp"
         android:layout_marginEnd="12dp"
-        android:contentDescription="@string/movie_poster"
-        android:background="#222" />
+        android:scaleType="centerCrop" />
 
+    <!-- Text section -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1">
 
+        <!-- TITLE (this is what MovieAdapter binds) -->
         <TextView
             android:id="@+id/textTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:textSize="16sp"
-            android:textColor="@android:color/white" />
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="4dp"
+            android:textColor="@android:color/black" />
 
+        <!-- Overview / description (bound to textDescription) -->
         <TextView
             android:id="@+id/textDescription"
             android:layout_width="wrap_content"
@@ -35,14 +40,16 @@
             android:maxLines="3"
             android:ellipsize="end"
             android:textSize="14sp"
-            android:textColor="@android:color/darker_gray" />
-    </LinearLayout>
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="6dp" />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:stepSize="0.5"
-        android:layout_marginStart="8dp" />
+        <!-- Rating bar -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:isIndicator="true" />
+    </LinearLayout>
 </LinearLayout>
