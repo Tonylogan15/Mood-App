@@ -1,8 +1,15 @@
+
 <svg width="400" height="800" xmlns="http://www.w3.org/2000/svg">
-<rect width="400" height="800" fill="white" stroke="black"/>
-<rect x="100" y="80" width="200" height="300" fill="none" stroke="black"/>
-<text x="80" y="420" font-size="28" font-family="Arial">Movie Title</text>
-<text x="80" y="460" font-size="18" font-family="Arial">Platform: Netflix</text>
-<rect x="80" y="500" width="240" height="60" fill="none" stroke="black" rx="10"/>
-<text x="140" y="537" font-size="22" font-family="Arial">Watch Now</text>
+<rect width="400" height="800" fill="#f7f7f7" stroke="#000"/>
+<text x="20" y="40" font-size="20">Movie Detail</text>
+<rect x="100" y="70" width="200" height="300" fill="none" stroke="#000"/>
+<text x="160" y="230" font-size="14">Poster</text>
+
+<text x="20" y="400" font-size="18">Movie Title</text>
+<text x="20" y="440" font-size="14">Rating: ⭐⭐⭐⭐☆</text>
+
+<text x="20" y="480" font-size="12">
+Description: Lorem ipsum dolor sit amet,
+consectetur adipiscing elit. Integer nec odio.
+</text>
 </svg>
