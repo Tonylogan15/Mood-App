@@ -94,8 +94,8 @@ Optional Feature
 
 
 For Milestone 2, here is the progress of our app!       
-**![Tester Demo](https://github.com/user-attachments/assets/319f5e4f-b659-4a2e-8de0-0ea3f5a8c6eb)  
-![Tester 2 Demo](https://github.com/user-attachments/assets/6b3fe848-95d6-4656-b74f-60bb9a190c59)**
+**![MoodMatch Demo](https://github.com/user-attachments/assets/df302880-a62e-4997-ad62-9b3b53b517a2)
+**
 
 ## License
 
