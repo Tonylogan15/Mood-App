@@ -12,7 +12,7 @@
 
 ### Description 
 
-**MovieMood is a mobile app that recommends movies based on the user’s current mood. Users select an emotion (like happy, sad, romantic, or adventurous), and the app suggests a list of fitting films with posters, summaries, and ratings. It aims to simplify the decision-making process of “What should I watch?” while making movie discovery more personal and fun.**
+**MovieMood is a mobile app that recommends movies based on how the user feels. Users select a mood (Happy, Chill, Sad, or Excited), and the app retrieves tailored movie lists from TheMovieDB (TMDB). Each result shows posters, titles, and ratings. Selecting a movie opens a detailed screen with full overview, release date, rating, and large poster art. The app makes choosing films easier, helping users discover what fits their mood instantly.**
 
 ### App Evaluation
 
@@ -23,7 +23,7 @@
 - **Story: Solves a relatable problem which is choosing a movie. The emotional tie in of mood enhances engagement.**
 - **Market: Broad audience including college students, movie lovers, and streaming users.**
 - **Habit: Medium–high; users may check the app frequently for ideas before watching.**
-- **Scope: Clear MVP, mood selection and movie list display using TheMovieDB API. Optional features like watchlists or trailers can be added later.**
+- **Scope: Clear MVP, mood selection, movie list display using TheMovieDB API, and movie details screen. Optional features like watchlists or trailers can be added later.**
 
 ## Product Spec
 
@@ -31,19 +31,13 @@
 
 Required Features:
 
-- User selects a mood (e.g., happy, sad, romantic, adventurous).
+- User selects a mood (e.g., happy, chill, sad, excited).
 - App fetches a list of recommended movies using TheMovieDB API.
-- Each movie card displays title, poster, brief description, and rating.
-- User can tap a movie to see a detail page with overview, genre, release date, and trailer link.
+- Movie RecyclerView shows movie poster, title, overview preview, and rating (converted from TMDB score to 5-star scale).
+- User can tap a movie to see a detail page with overview, genre, release date, and large poster.
+- Light UI theme across main list and detail screen.
 - Basic navigation between Home (mood selector), Results (movie list), and Details screens.
 
-Stretch Features:
-
-- Save favorite movies to a personal “Watchlist.”
-- Share recommendations via social media.
-- Personalized suggestions based on viewing history.
-- Dark/light mode toggle.
-- Integration with streaming service availability (e.g., “Watch on Netflix”).
 
 ### 2. Chosen API(s)
 
@@ -53,6 +47,7 @@ Stretch Features:
 - Endpoint examples:
     - /discover/movie?sort_by=popularity.desc&with_genres=
     - /search/movie?query=
+    - https://image.tmdb.org/t/p/w500{poster_path}
 
 ### 3. User Interaction
 
@@ -64,15 +59,10 @@ Required Feature
   - => **Returns a scrollable list of movie cards.**
 - **View Movie Details**
   - => **User taps a movie card.**
-  - => **Opens a detailed screen showing title, description, rating, release year, and genre.**
+  - => **Opens a detailed screen showing title, description, rating, release year, and large poster.**
 - **Navigate Home → Results → Details → Back**
     - => **Simple navigation bar or back arrow.**
 
-Optional Feature
-- **Save to Watchlist**
-    - => **User taps a heart/bookmark icon → movie saved locally or in Firebase.**
-- **Share Recommendation**
-    - => **User taps Share → opens system share sheet.**
 
 ## Wireframes
 
@@ -90,7 +80,7 @@ Optional Feature
 - TMDB API key stored securely (not hardcoded in codebase).
 - Consider using RecyclerView for movie list display.
 - MVP delivery: mood selection → movie list → movie detail.
-- Stretch: add favorites, trailers, and sharing.
+
 
 
 For Milestone 2, here is the progress of our app!       
