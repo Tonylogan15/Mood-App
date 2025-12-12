@@ -36,7 +36,7 @@ The following REQUIRED files are included:
 Here's a video that demos all of the app's implemented features:
 **CLICK THE THUMBNAIL TO PLAY**
 
-[![Demo Video](assets/MoodMovieThumbnail.png)](assets/MoodMovieDemo.mp4)
+[![Demo Video](MoodMovieThumbnail.png)](MoodMovieDemo.mp4)
 
 
 VIDEO created with **iMovie**
