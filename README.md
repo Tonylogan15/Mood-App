@@ -21,7 +21,7 @@ The following REQUIRED features are completed:
 
 The following REQUIRED files are included:
 
-- [ ] Updated 📄 `project_spec.md`, which contains:
+- [x] Updated 📄 `project_spec.md`, which contains:
   - [x] App Overview (Milestone 1)
   - [x] App Spec (Milestone 1)
   - [x] Checked off 2+ completed features
