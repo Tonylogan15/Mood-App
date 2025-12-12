@@ -34,11 +34,12 @@ The following REQUIRED files are included:
 ## 🎥 Demo Video
 
 Here's a video that demos all of the app's implemented features:
+**CLICK THE THUMBNAIL TO PLAY**
 
-[![Demo Video](assets/)](assets/MoodMovieDemo.mp4)
+[![Demo Video](assets/MoodMovieThumbnail.png)](assets/MoodMovieDemo.mp4)
 
 
-VIDEO created with **Kap**
+VIDEO created with **iMovie**
 
 ## Notes
 
