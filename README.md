@@ -24,7 +24,7 @@ The following REQUIRED files are included:
 - [x] Updated 📄 `project_spec.md`, which contains:
   - [x] App Overview (Milestone 1)
   - [x] App Spec (Milestone 1)
-        
+      
   - [ ] Comlpeted CodePath required features
   * [x] Feature 1: Uses a RecyclerView.
   * [ ] Feature 2: Uses consistent custom styling.
