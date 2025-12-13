@@ -81,11 +81,11 @@ Required Feature
 
 
 
-For Milestone 2, here is the progress of our app!
-**APP BEFORE MOVIE ITEM LIST ENHANCEMENT**  
+For Milestone 2, here is the progress of our app!  
+**APP BEFORE MOVIE ITEM LIST ENHANCEMENT:**  
 [![Demo Gif](M2ProgressDemo.gif)]  
 
-**APP AFTER MOVIE ITEM LIST ENHANCEMENT**  
+**APP AFTER MOVIE ITEM LIST ENHANCEMENT:**  
 ![MoodMatch Demo](https://github.com/user-attachments/assets/df302880-a62e-4997-ad62-9b3b53b517a2)
 
 
