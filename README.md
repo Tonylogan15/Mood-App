@@ -24,7 +24,14 @@ The following REQUIRED files are included:
 - [x] Updated 📄 `project_spec.md`, which contains:
   - [x] App Overview (Milestone 1)
   - [x] App Spec (Milestone 1)
+  - [ ] 
   - [x] Checked off 2+ completed features
+* [x] Feature 1: User selects a mood (e.g., happy, chill, sad, excited).
+* [x] Feature 2: App fetches a list of recommended movies using TheMovieDB API.
+* [x] Feature 3: Each movie card displays title, brief description, and rating.
+* [x] Feature 4: User can tap a movie to see a detail page with overview, genre, release date, and large movie poster.
+* [x] Feature 5: Basic navigation between Home (mood selector), Results (movie list), and Details screens.
+
   - [x] 2+ Videos/GIFs of build progress
 
 - [x] Our 🎥 Demo Video
@@ -35,6 +42,7 @@ The following REQUIRED files are included:
 
 Here's a video that demos all of the app's implemented features:
 **CLICK THE THUMBNAIL TO PLAY**
+**YOUTUBE VERSION** : (https://youtu.be/4clu_PKIkK4)
 
 [![Demo Video](MoodMovieThumbnail.png)](MoodMovieDemo.mp4)
 
