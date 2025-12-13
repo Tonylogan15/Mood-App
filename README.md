@@ -24,7 +24,11 @@ The following REQUIRED files are included:
 - [x] Updated 📄 `project_spec.md`, which contains:
   - [x] App Overview (Milestone 1)
   - [x] App Spec (Milestone 1)
-  - [ ] 
+        
+  - [ ] Comlpeted CodePath required features
+  * [x] Feature 1: Uses a RecyclerView.
+  * [ ] Feature 2: Uses consistent custom styling.
+        
   - [x] Checked off 2+ completed features
 * [x] Feature 1: User selects a mood (e.g., happy, chill, sad, excited).
 * [x] Feature 2: App fetches a list of recommended movies using TheMovieDB API.
@@ -41,7 +45,7 @@ The following REQUIRED files are included:
 ## 🎥 Demo Video
 
 Here's a video that demos all of the app's implemented features:
-**CLICK THE THUMBNAIL TO PLAY**
+**CLICK THE THUMBNAIL TO PLAY**  
 **YOUTUBE VERSION** : (https://youtu.be/4clu_PKIkK4)
 
 [![Demo Video](MoodMovieThumbnail.png)](MoodMovieDemo.mp4)
