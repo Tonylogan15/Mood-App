@@ -16,7 +16,6 @@
 
 ### App Evaluation
 
-<!-- Evaluation of your app across the following attributes -->
 
 - **Category: Entertainment/Lifestyle**
 - **Mobile: Great use of mobile UI through mood buttons, swipeable cards, and scrolling posters. Designed for on‑the‑go discovery and quick browsing.**
@@ -31,12 +30,11 @@
 
 Required Features:
 
-- User selects a mood (e.g., happy, chill, sad, excited).
-- App fetches a list of recommended movies using TheMovieDB API.
-- Movie RecyclerView shows movie poster, title, overview preview, and rating (converted from TMDB score to 5-star scale).
-- User can tap a movie to see a detail page with overview, genre, release date, and large poster.
-- Light UI theme across main list and detail screen.
-- Basic navigation between Home (mood selector), Results (movie list), and Details screens.
+* [x] User selects a mood (e.g., happy, chill, sad, excited).
+* [x] App fetches a list of recommended movies using TheMovieDB API.
+* [x] Each movie card displays title, brief description, and rating.
+* [x] User can tap a movie to see a detail page with overview, genre, release date, and large movie poster.
+* [x] Basic navigation between Home (mood selector), Results (movie list), and Details screens.
 
 
 ### 2. Chosen API(s)
